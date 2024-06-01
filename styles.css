@@ -1,0 +1,223 @@
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.password-generator {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #ff0;
+    font-size: 2em;
+}
+
+.password-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#password {
+    border: none;
+    background: none;
+    color: #fff;
+    width: 80%;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.refresh-btn {
+    background: none;
+    border: none;
+    color: #ff0;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.copy-btn {
+    background-color: #ff0;
+    color: #111;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.slider {
+    margin: 10px;
+    width: 80%;
+}
+
+#lengthValue {
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.options label {
+    display: block;
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.password-history {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.password-history h2 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.password-history ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.password-history li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.password-history input[type="text"] {
+    border: none;
+    background: none;
+    color: #fff;
+    width: 90%;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.clear-history {
+    background-color: transparent;
+    border: none;
+    color: #ff0;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    font-size: 1em;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+footer a {
+    color: #ff0;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .password-generator {
+        padding: 15px;
+    }
+
+    .copy-btn, .clear-history {
+        padding: 10px;
+    }
+
+    .slider-container, .options, .password-history ul {
+        width: 100%;
+    }
+
+    .password-history li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .password-history input[type="text"] {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .password-box, .slider-container {
+        flex-direction: column;
+    }
+
+    .password-box input, .password-box button {
+        width: 100%;
+    }
+
+    .copy-btn, .clear-history {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .slider {
+        width: 100%;
+    }
+
+    #lengthValue {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    .options label {
+        font-size: 0.9em;
+    }
+
+    .password-history h2 {
+        font-size: 1.2em;
+    }
+
+    .password-history li {
+        padding: 10px;
+    }
+
+    .password-history input[type="text"] {
+        font-size: 0.8em;
+    }
+}

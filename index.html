@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="password-generator">
+            <h1>PASSWORD GENERATOR</h1>
+            <div class="password-box">
+                <input type="text" id="password" value="" readonly>
+                <button class="refresh-btn" onclick="generatePassword()">
+                    <i class="fa fa-sync"></i>
+                </button>
+            </div>
+            <button class="copy-btn" onclick="copyPassword()">COPY PASSWORD_</button>
+            <div class="slider-container">
+                <input type="range" min="8" max="32" value="18" class="slider" id="lengthRange">
+                <span id="lengthValue">18</span>
+            </div>
+            <div class="options">
+                <label><input type="checkbox" id="uppercase" checked> Uppercase letters</label>
+                <label><input type="checkbox" id="lowercase" checked> Lowercase letters</label>
+                <label><input type="checkbox" id="numbers" checked> Numbers</label>
+                <label><input type="checkbox" id="symbols" checked> Symbols</label>
+            </div>
+            <div class="password-history">
+                <h2>PASSWORD HISTORY</h2>
+                <ul id="historyList"></ul>
+                <button class="clear-history" onclick="clearHistory()">Clear history</button>
+            </div>
+        </div>
+        <footer>
+            <a href="#">ENABLE AUDIO</a> | 
+            <a href="#">KEYBOARD SHORTCUTS</a> | 
+            <a href="#">SOURCE CODE</a> | 
+            <a href="#">AUTHOR</a>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
